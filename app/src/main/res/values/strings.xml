@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Medidor</string>
+    <string name="medicion">Ingrese valor de Glucosa</string>
+    <string name="unidades">Ingrese unidades a Colocar</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="todo">TODO</string>
+    <string name="title_home">Medidor</string>
+    <string name="title_dashboard">Archivos</string>
+    <string name="title_notifications">Historial</string>
+    <string name="glucosa">Nivel de Glucosa</string>
+    <string name="cetonas">Cetonas Medidas</string>
+    <string name="unidadesCV">Unidades Colocadas</string>
+</resources>
