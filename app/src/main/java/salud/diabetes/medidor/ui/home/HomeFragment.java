@@ -1,10 +1,13 @@
 package salud.diabetes.medidor.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import androidx.annotation.NonNull;
@@ -44,6 +47,18 @@ public class HomeFragment extends Fragment {
 
     ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(), android.R.layout.simple_spinner_dropdown_item,opciones);
         spinner.setAdapter(adapter);
+
+        final Button button = rootView.findViewById(R.id.buttonSave);
+        button.setOnClickListener(view -> {
+            Intent replyIntent = new Intent();
+            if (TextUtils.isEmpty(mEditWordView.getText())) {
+                setResult(RESULT_CANCELED, replyIntent);
+            } else {
+                String word = mEditWordView.getText().toString();
+                replyIntent.putExtra(EXTRA_REPLY, word);
+                setResult(RESULT_OK, replyIntent);
+            }
+        });
 
 
         return rootView;
